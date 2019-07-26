@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
+from .local_settings import DATABASES as db
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -85,16 +86,7 @@ WSGI_APPLICATION = 'radiojavan.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'radiojavan',
-        'USER': 'hossein',
-        'PASSWORD': 'abcd@1234',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+DATABASES = db
 
 
 # Password validation
