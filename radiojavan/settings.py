@@ -25,7 +25,7 @@ SECRET_KEY = '#julxup1&$cokuw$uwilz4h0$v^!5qf*+y$#bf43*!7dtp#wnr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '*' ]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -45,7 +45,10 @@ INSTALLED_APPS = [
     'music',
     'podcast',
     'ticketing',
-    'video'
+    'video',
+    'tag',
+    'comment',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -112,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+AUTH_USER_MODEL = 'account.User'
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 

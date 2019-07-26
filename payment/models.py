@@ -4,8 +4,10 @@ from django.db import models
 
 
 class Donate(models.Model):
-    from_user = models.ForeignKey("account.User", on_delete=models.SET_NULL)
-    to_artist = models.ForeignKey("art.Artist", on_delete=models.SET_NULL)
+    from_user = models.ForeignKey(
+        "account.User", on_delete=models.SET_NULL, null=True, blank=True)
+    to_artist = models.ForeignKey(
+        "art.Artist", on_delete=models.SET_NULL, null=True, blank=True)
     amount = models.FloatField()
 
     def __str__(self):

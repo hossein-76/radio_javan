@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Advertisement(models.Model):
-    title = models.CharFields(max_length=255)
+    title = models.CharField(max_length=255)
     start_at = models.DateTimeField()
     end_at = models.DateTimeField()
     amount = models.IntegerField()

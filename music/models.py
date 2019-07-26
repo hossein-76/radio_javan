@@ -22,17 +22,17 @@ class SongManager(models.Manager):
 class Song(models.Model):
     name = models.CharField(max_length=255)
     singer = models.ForeignKey(
-        'art.Artist', on_delete=models.SET_NULL, null=True, blank=True)
+        'art.Artist', on_delete=models.SET_NULL, null=True, blank=True, related_name="songs")
     released_date = models.DateField()
     uploaded_date = models.DateTimeField(auto_now_add=True)
     song_file = models.FileField()
     is_exclusive = models.BooleanField(default=False)
     lyrics = models.TextField(blank=True)
     arrangement = models.ForeignKey(
-        'art.Artist', on_delete=models.SET_NULL, null=True, blank=True)
+        'art.Artist', on_delete=models.SET_NULL, null=True, blank=True, related_name="arranges")
     price = models.FloatField(default=0)
     cover = models.ForeignKey(
-        'art.Cover', on_delete=models.SET_NULL, null=True, blank=True)
+        'art.Cover', on_delete=models.SET_NULL, null=True, blank=True, related_name="coverd_songs")
     social_medias = JSONField(default=dict)
     tags = models.ManyToManyField('tag.Tag', blank=True)
     approval_status = models.CharField(max_length=50, choices=(

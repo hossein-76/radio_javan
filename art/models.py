@@ -16,9 +16,11 @@ class ArtistManager(models.Manager):
 
 class Artist(models.Model):
     name = models.CharField(max_length=50)
-    admin = models.ForeignKey('account.User', on_delete=models.CASCADE)
+    admin = models.ForeignKey(
+        'account.User', on_delete=models.CASCADE, related_name='artists')
     is_band = models.BooleanField(default=False)
-    band_members = models.ManyToManyField('account.User', blank=True)
+    band_members = models.ManyToManyField(
+        'account.User', blank=True, related_name='bands')
     is_verified = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     description = models.TextField(null=True, blank=True)
