@@ -48,7 +48,7 @@ graphql-relay==0.4.5
 html5lib==1.0.1
 idna==2.7
 ipaddress==1.0.22
-ipython==6.5.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 jedi==0.12.1
 jmespath==0.9.3
