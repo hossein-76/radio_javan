@@ -70,7 +70,7 @@ ptyprocess==0.6.0
 pycparser==2.18
 pycryptodome==3.7.3
 Pygments==2.2.0
-PyJWT==1.7.1
+PyJWT==2.4.0
 python-crontab==2.3.6
 python-dateutil==2.7.5
 pytz==2018.5
